@@ -61,7 +61,6 @@ const Judy = () => {
         className="absolute bottom-0 mb-12 text-center md:hidden w-full underline flex flex-col"
       >
         <Link to={"/wishes"}>Our Wishes</Link>
-        <Link to={"/about"}>About this</Link>
       </motion.div>
       {/* Mobile */}
       <motion.div
