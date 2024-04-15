@@ -21,16 +21,10 @@ const Judy = () => {
         exit={{ opacity: 0 }}
         className="absolute top-0 left-32 mt-12 text-center hidden md:flex flex-col justify-around h-32 "
       >
-        <p className=" text-xl">Judy Walker</p>
+        <p className=" text-xl">Vishnu Koyyada</p>
         <div className="flex flex-col text-left">
           <Link to={"/wishes"} className="hover:underline">
             Our Wishes
-          </Link>
-          <Link
-            to={"https://github.com/SomnathDas/lofty-leather"}
-            className="hover:underline"
-          >
-            About this
           </Link>
         </div>
       </motion.div>
