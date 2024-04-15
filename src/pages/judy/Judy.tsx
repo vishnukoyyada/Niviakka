@@ -92,7 +92,7 @@ const Judy = () => {
           src={mainImage}
           alt="Birthday person"
           className="relative select-none rounded-xl h-full object-cover"
-          style={{ objectPosition: "100% 100%" }}
+          style={{ objectPosition: "50% 35%" }}
           transition={{ delay: 0.2, ...transition }}
         />
       </motion.div>
