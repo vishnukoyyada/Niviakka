@@ -46,7 +46,7 @@ const messages = {
 const sampleMessagesDataArray: TMessagesData[] = [
   {
     albumArt: vishnuimage,
-    musicName: "Chinni chinni aasa",
+    musicName: "Chinnichinni  aasa",
     messageInParas: [
       "Hello Akka it's your birthday! Wishing you the happiest of birthdays filled with all the things you love and cherish the most.",
       "May this year be filled with lots of laughter, love, and unforgettable memories. I hope you get to spend your special day surrounded by the people you care about, doing all the things that make you happy.",

@@ -18,7 +18,8 @@ const Home = () => {
         exit={{ opacity: 0 }}
         className="absolute top-0 mt-12 text-center"
       >
-        <p>"From the Heaven charming beautiful princess my lovely akka"</p>
+        <span>"From the Heaven, My dearest, charming, and beautiful princess,luminous pearl my precious akka..."</span>
+        
         <p>Niveditha</p>
       </motion.div>
       
