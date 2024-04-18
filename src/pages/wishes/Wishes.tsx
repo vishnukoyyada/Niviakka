@@ -52,7 +52,7 @@ const messages = {
 const sampleMessagesDataArray: TMessagesData[] = [
   {
     albumArt: vishnuimage,
-    musicName: "Chinnichinni  aasa",
+    musicName: "Chinnichinni",
     messageInParas: [
       "Hello Akka it's your birthday! Wishing you the happiest of birthdays filled with all the things you love and cherish the most.",
       "May this year be filled with lots of laughter, love, and unforgettable memories. I hope you get to spend your special day surrounded by the people you care about, doing all the things that make you happy.",
@@ -100,17 +100,6 @@ const sampleMessagesDataArray: TMessagesData[] = [
     musicFilePath: firstMusic,
   },
   {
-    albumArt: krushaimage,
-    musicName: "Night City - R E L's Version",
-    messageInParas: [
-      "Happy Birthday, my dear friend Niveditha! From the moment we met, I knew you were someone special. Your laughter is infectious, your spirit is contagious, and your friendship means the world to me.",
-      "Today, let's celebrate all the wonderful moments we've shared and all the adventures that lie ahead. Here's to another year of laughter, love, and unforgettable memories. Cheers to you, the most amazing Niveditha I know!",
-      "Warm regards,",
-      "krusaa",
-    ],
-    musicFilePath: firstMusic,
-  },
-  {
     albumArt: inshaimage,
     musicName: "Night City - R E L's Version",
     messageInParas: [
@@ -122,6 +111,18 @@ const sampleMessagesDataArray: TMessagesData[] = [
     ],
     musicFilePath: firstMusic,
   },
+  {
+    albumArt: krushaimage,
+    musicName: "Night City - R E L's Version",
+    messageInParas: [
+      "Happy Birthday, my dear friend Niveditha! From the moment we met, I knew you were someone special. Your laughter is infectious, your spirit is contagious, and your friendship means the world to me.",
+      "Today, let's celebrate all the wonderful moments we've shared and all the adventures that lie ahead. Here's to another year of laughter, love, and unforgettable memories. Cheers to you, the most amazing Niveditha I know!",
+      "Warm regards,",
+      "krusaa",
+    ],
+    musicFilePath: firstMusic,
+  },
+
   {
     albumArt: kaivalyaimage,
     musicName: "Night City - R E L's Version",
