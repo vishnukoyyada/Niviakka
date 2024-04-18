@@ -19,7 +19,7 @@ import mainImage10 from "../../assets/sampleData/10.jpg";
 const transition = { duration: 0.65, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Home = () => {
-  const images = [mainImage1, mainImage2, mainImage3,mainImage4, mainImage5, mainImage6,mainImage7, mainImage8, mainImage9,mainImage10]; // Add more images here
+  const images = [mainImage1, mainImage2, mainImage3,mainImage4, mainImage5, mainImage6,mainImage7, mainImage8]; // Add more images here
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
