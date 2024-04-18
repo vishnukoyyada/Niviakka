@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import Marquee from "../../components/Marquee/Marquee";
-import mainImage1 from "../../assets/sampleData/1.jpg";
-import mainImage2 from "../../assets/sampleData/2.jpg";
-import mainImage3 from "../../assets/sampleData/3.jpg";
+import mainImage1 from "../../assets/sampleData/2.jpg";
+import mainImage2 from "../../assets/sampleData/3.jpg";
+import mainImage3 from "../../assets/sampleData/9.jpg";
 // Add more image imports as needed
 
 const transition = { duration: 0.65, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -21,7 +21,7 @@ const Home = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 1000); // Change transition speed here (1000ms = 1s)
+    }, 2000); // Change transition speed here (1000ms = 1s)
 
     return () => clearInterval(interval);
   }, [images.length]);
