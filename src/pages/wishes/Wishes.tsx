@@ -1,15 +1,12 @@
 import "./Wishes.css";
-
 import { useNavigate, useParams } from "react-router-dom";
-
 import { motion } from "framer-motion";
 import { usePalette } from "@roylee1997/react-palette";
-
 import Progress from "../../components/Progress/Progress";
 import MusicCard from "../../components/MusicCard/MusicCard";
 import TMessagesData from "../../typings/MessagesData";
 
-// albumArts
+// Import albumArts and musicFilePaths
 import vishnuimage from "../../assets/sampleData/vishnu.jpg";
 import hariimage from "../../assets/sampleData/hari.jpg";
 import suhasimage from "../../assets/sampleData/suhas.jpg";
@@ -18,17 +15,17 @@ import krushaimage from "../../assets/sampleData/krusa.jpg";
 import inshaimage from "../../assets/sampleData/insa.jpg";
 import kaivalyaimage from "../../assets/sampleData/kaivalya.jpg";
 
-
-// musicFilePaths
+// Import music files
 import firstMusic from "../../assets/sampleData/music/chinni.mp3";
 import secondMusic from "../../assets/sampleData/music/almost-nothing.mp3";
 
-// framer transition and variants
+// Common transition settings
 const commonTransition = {
   ease: [0.43, 0.13, 0.23, 0.96],
   duration: 0.5,
 };
 
+// Variants for animations
 const messageContainer = {
   hidden: { opacity: 0 },
   show: {
@@ -47,8 +44,7 @@ const messages = {
   show: { opacity: 1 },
 };
 
-/* Each message must have music details (can be fetched through an API) with Album Art to be must) and message itself in multiple p tags (if possible) */
-// Sample Data
+// Sample messages data
 const sampleMessagesDataArray: TMessagesData[] = [
   {
     albumArt: vishnuimage,
@@ -135,21 +131,24 @@ const sampleMessagesDataArray: TMessagesData[] = [
     ],
     musicFilePath: firstMusic,
   },
+  // Add more messages data here
+  // Sample data for other messages...
 ];
 
 const Wishes = () => {
   const navigate = useNavigate();
   const { id = 0 } = useParams();
 
-  if (Number(id) < 0 || sampleMessagesDataArray[Number(id)] == undefined) {
-    return <p>Invalid Wish Message Id</p>;
-  }
-
+  // Fetch color data for dynamic styling
   const {
     data: colorData,
     loading: colorDataIsLoading,
     error,
   } = usePalette(sampleMessagesDataArray[Number(id)].albumArt);
+
+  if (Number(id) < 0 || sampleMessagesDataArray[Number(id)] == undefined) {
+    return <p>Invalid Wish Message Id</p>;
+  }
 
   if (error) {
     return <h1>Invalid Wish Message Id</h1>;
@@ -162,14 +161,19 @@ const Wishes = () => {
       exit="exit"
       className="wishes-wrapper h-screen w-screen flex flex-col justify-between items-center"
     >
+      {/* Progress bar */}
       <Progress
         primaryColor={colorData?.vibrant}
         secondaryColor={colorData?.darkVibrant}
         messageDataArrayLength={sampleMessagesDataArray.length}
       />
+      {/* Message container */}
       <motion.div
         className="lg:w-11/12 rounded-t-2xl md:rounded-t-xl flex md:flex-row flex-col-reverse"
         style={{
+          backgroundImage: `url(${sampleMessagesDataArray[Number(id)].albumArt})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundColor: colorDataIsLoading ? "#fff" : colorData?.vibrant,
         }}
         initial={{ y: "1000px" }}
@@ -204,6 +208,7 @@ const Wishes = () => {
           }
         }}
       >
+        {/* Messages */}
         <motion.div
           className="md:w-1/2"
           initial="hidden"
@@ -214,7 +219,7 @@ const Wishes = () => {
             (eachPara, index) => {
               return (
                 <motion.p
-                  className="p-8 message text-3xl"
+                  className="p-8 message text-3xl text-white"
                   variants={messages}
                   key={index + 2045}
                 >
@@ -224,6 +229,7 @@ const Wishes = () => {
             }
           )}
         </motion.div>
+        {/* Music Card */}
         <div className="md:w-1/2 h-1/2 md:h-auto flex justify-center items-center">
           <MusicCard
             albumArt={sampleMessagesDataArray[Number(id)].albumArt}
