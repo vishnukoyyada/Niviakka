@@ -7,19 +7,12 @@ import Marquee from "../../components/Marquee/Marquee";
 import mainImage1 from "../../assets/sampleData/1.jpg";
 import mainImage2 from "../../assets/sampleData/2.jpg";
 import mainImage3 from "../../assets/sampleData/3.jpg";
-import mainImage4 from "../../assets/sampleData/4.jpg";
-import mainImage5 from "../../assets/sampleData/5.jpg";
-import mainImage6 from "../../assets/sampleData/6.jpg";
-import mainImage7 from "../../assets/sampleData/7.jpg";
-import mainImage8 from "../../assets/sampleData/8.jpg";
-import mainImage9 from "../../assets/sampleData/9.jpg";
-import mainImage10 from "../../assets/sampleData/10.jpg";
 // Add more image imports as needed
 
 const transition = { duration: 0.65, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Home = () => {
-  const images = [mainImage1, mainImage2, mainImage3,mainImage4, mainImage5, mainImage6,mainImage7, mainImage8]; // Add more images here
+  const images = [mainImage1, mainImage2, mainImage3]; // Add more images here
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
